@@ -83,6 +83,7 @@ class DetailPageActivity : AppCompatActivity() {
                     datalocal = it.data!!.products[0]
                     binding.productname.text = it.data!!.products[0].title
                     binding.productprice.text = it.data!!.products[0].price[0].value.toString()
+                    binding.ratingBar.rating = it.data!!.products[0].ratingCount.toFloat()
                     if(it.data.products[0].isFavourite){
                         binding.productheart.load(R.drawable.ic_heart)
                         isFavourite = true
